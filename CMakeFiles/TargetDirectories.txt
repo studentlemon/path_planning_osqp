@@ -1,0 +1,3 @@
+/home/jiaotong404/demo/CMakeFiles/rebuild_cache.dir
+/home/jiaotong404/demo/CMakeFiles/osqp_demo.dir
+/home/jiaotong404/demo/CMakeFiles/edit_cache.dir

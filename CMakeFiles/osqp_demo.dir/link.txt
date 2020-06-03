@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/osqp_demo.dir/osqp_demo.cc.o CMakeFiles/osqp_demo.dir/osqp_problem.cc.o  -o osqp_demo -Wl,-rpath,/usr/local/lib /usr/local/lib/libosqp.so 

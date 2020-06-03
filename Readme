@@ -1,0 +1,9 @@
+This is a demo for Apollo autonomous driving in Public Road.
+
+The main idea is building the optimization method for solving the optimal path.
+
+Before running this example, please install the osqp and eigen.
+
+After installtion, bash run.sh.
+
+The optimal path will be found.
