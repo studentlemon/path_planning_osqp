@@ -73,12 +73,12 @@ void OSQPProblem::CalculateKernel(std::vector<c_float>* P_data,
   ++value_index;
 
   // -2 * w_dddx / delta_s^2 * x(i)'' * x(i + 1)''
-  for (int i = 1; i < n; ++i) {
-    columns[2 * n + i].emplace_back(2 * n + i - 1,
-                                    (-1.0 * weight_dddx_ / delta_s_square) /
-                                        (scale_factor_[2] * scale_factor_[2]));
-    ++value_index;
-  }
+//   for (int i = 1; i < n; ++i) {
+//     columns[2 * n + i].emplace_back(2 * n + i - 1,
+//                                     (-1.0 * weight_dddx_ / delta_s_square) /
+//                                         (scale_factor_[2] * scale_factor_[2]));
+//     ++value_index;
+//   }
 
   if (value_index != num_of_nonzeros) {
     std::cout << "Error in calculate kernel!" << std::endl;
@@ -88,7 +88,7 @@ void OSQPProblem::CalculateKernel(std::vector<c_float>* P_data,
   for (int i = 0; i < num_of_variables; ++i) {
     P_indptr->push_back(ind_p);
     for (const auto& row_data_pair : columns[i]) {
-      P_data->push_back(row_data_pair.second * 1.0);
+      P_data->push_back(row_data_pair.second * 2.0);
       P_indices->push_back(row_data_pair.first);
       ++ind_p;
     }
